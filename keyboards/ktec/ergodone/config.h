@@ -22,6 +22,9 @@
 
 #define TAPPING_TOGGLE  2
 
+//Combos:
+#define COMBO_COUNT 3
+
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 

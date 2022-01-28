@@ -18,7 +18,7 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE        = no  # Enable keyboard backlight functionality
 SWAP_HANDS_ENABLE       = no  # Disable Onehand
 RGBLIGHT_ENABLE         = no
-
+COMBO_ENABLE            = yes #enable combos
 # project specific files
 QUANTUM_LIB_SRC += i2c_master.c
 SRC = \
