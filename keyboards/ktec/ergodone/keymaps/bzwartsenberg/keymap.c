@@ -22,7 +22,7 @@ const uint16_t PROGMEM combo_bsls[] = {KC_O, KC_P, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo_quot, KC_QUOT),
     COMBO(combo_dquo, KC_DQUO),
-    hCOMBO(combo_bsls, KC_BSLS),
+    COMBO(combo_bsls, KC_BSLS),
 };
 /* const uint16_t PROGMEM test_combo1[] = {KC_A, KC_B, COMBO_END}; */
 /* const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END}; */
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 | Enter|Tab   |------|       |------|  BSPC  |SPC   |
  *                                 |      |      | End  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
- *
+ */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox( //layer 0 : default
