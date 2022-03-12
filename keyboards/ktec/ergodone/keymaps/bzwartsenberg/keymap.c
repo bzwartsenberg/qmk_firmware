@@ -31,7 +31,23 @@ combo_t key_combos[COMBO_COUNT] = {
 /*     COMBO(combo_dquo, KC_DQUO), */
 /* }; */
 
+// Some definitions:
+#define KC_SFTF LSFT_T(KC_F)
+#define KC_CTLD LCTL_T(KC_D)
+#define KC_SFTZ LSFT_T(KC_Z)
+#define KC_CTLX LCTL_T(KC_X)
+#define KC_GUIC LGUI_T(KC_C)
+#define KC_ALTV LALT_T(KC_V)
 
+
+#define KC_SFTJ LSFT_T(KC_J)
+#define KC_CTLK LCTL_T(KC_K)
+#define KC_SFTSLSH LSFT_T(KC_SLSH)
+#define KC_CTLDOT LCTL_T(KC_DOT)
+#define KC_GUICOMM LGUI_T(KC_COMM)
+#define KC_ALTM LALT_T(KC_M)
+
+#define KC_LT4GRV LT(4, KC_GRV)
 // combo keys? leds? where does ' and " go?
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
@@ -59,25 +75,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox( //layer 0 : default
         // left hand
-        KC_GRV ,  KC_1       , KC_2        , KC_3           , KC_4          , KC_5           , KC_MINS,
-        KC_TAB ,  KC_Q       , KC_W        , KC_E           , KC_R          , KC_T           , KC_LBRC,
-        KC_ESC ,  KC_A       , KC_S        , KC_D           , KC_F          , KC_G           ,
-        KC_LSFT, LSFT_T(KC_Z), LCTL_T(KC_X), LGUI_T(KC_C)   , LALT_T(KC_V)  , KC_B           , KC_GRV ,
-        KC_LCTL, KC_LGUI     , KC_LALT     , MO(3)          , LT(1          , KC_ESC)        ,
-        KC_LEFT, KC_RGHT     ,
-        KC_HOME,
-        KC_ENT , KC_TAB      , KC_END      ,
+        KC_GRV    ,  KC_1   , KC_2    , KC_3      , KC_4     , KC_5      , KC_MINS,
+        KC_TAB    ,  KC_Q   , KC_W    , KC_E      , KC_R     , KC_T      , KC_LBRC,
+        KC_ESC    ,  KC_A   , KC_S    , KC_CTLD   , KC_SFTF  , KC_G      ,
+        KC_LSFT   , KC_SFTZ , KC_CTLX ,  KC_GUIC  , KC_ALTV  , KC_B      , KC_GRV ,
+        KC_LCTL   , KC_LGUI , KC_LALT , MO(3)     , MO(1)    ,
+        KC_LEFT   , KC_RGHT ,
+        KC_HOME   ,
+        KC_ENT    , KC_TAB  , KC_END  ,
 
 
         // right hand
-        KC_EQL , KC_6        , KC_7        , KC_8           , KC_9          , KC_0           , KC_BSPC,
-        KC_RBRC, KC_Y        , KC_U        , KC_I           , KC_O          , KC_P           , KC_BSLS,
-        KC_H   , KC_J        , KC_K        , KC_L           , KC_SCLN       , KC_QUOT        ,
-        KC_QUOT, KC_N        , LALT_T(KC_M), LGUI_T(KC_COMM), LCTL_T(KC_DOT), LSFT_T(KC_SLSH), KC_RSFT,
-        LT(4   , KC_GRV)     , TT(2)       , KC_LALT        , KC_LGUI       , KC_LCTL        ,
-        KC_UP  , KC_DOWN     ,
-        KC_PGUP,
-        KC_PGDN, KC_BSPC     , KC_SPC)     ,
+        KC_EQL    , KC_6    , KC_7    , KC_8      , KC_9     , KC_0      , KC_BSPC,
+        KC_RBRC   , KC_Y    , KC_U    , KC_I      , KC_O     , KC_P      , KC_BSLS,
+        KC_H      , KC_SFTJ , KC_CTLK , KC_L      , KC_SCLN  , KC_QUOT   ,
+        KC_QUOT   , KC_N    , KC_ALTM , KC_GUICOMM, KC_CTLDOT, KC_SFTSLSH, KC_RSFT,
+        KC_LT4GRV , TT(2)   , KC_LALT , KC_LGUI   , KC_LCTL  ,
+        KC_UP     , KC_DOWN ,
+        KC_PGUP   ,
+        KC_PGDN   , KC_BSPC , KC_SPC) ,
 
 /* Keymap 1: Symbol Layer
  *
@@ -154,7 +170,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_BTN1, KC_BTN3, KC_TRNS ,
 
       KC_TRNS, KC_TRNS, KC_TRNS , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_PSCR , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_DEL , KC_PSCR , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
       KC_MS_L, KC_MS_D, KC_MS_U , KC_MS_R, KC_TRNS, KC_TRNS,
       TO(0)  , KC_TRNS, KC_TRNS , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS , KC_TRNS, KC_TRNS,
