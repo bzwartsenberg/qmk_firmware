@@ -80,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox( //layer 0 : default
         // left hand
         KC_GRV     , KC_1    , KC_2    , KC_3      , KC_4     , KC_5      , KC_DEL   ,
-        KC_TAB     , KC_Q    , KC_W    , KC_E      , KC_R     , KC_T      , KC_LBRC  ,
+        KC_TAB     , KC_Q    , KC_W    , KC_E      , KC_R     , KC_T      , TO(CVAT)  ,
         KC_ESC     , KC_A    , KC_S    , KC_CTLD   , KC_SFTF  , KC_G      ,
-        KC_LSFT    , KC_SFTZ , KC_CTLX , KC_GUIC   , KC_ALTV  , KC_B      , TO(CVAT) ,
+        KC_LSFT    , KC_SFTZ , KC_CTLX , KC_GUIC   , KC_ALTV  , KC_B      , KC_NO,
         KC_LCTL    , KC_LGUI , KC_LALT , MO(3)     , MO(1)    ,
         KC_LEFT    , KC_RGHT ,
         KC_HOME    ,
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO      , KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5   , ALT_F4 ,
         KC_NO      , KC_1    , KC_2    , KC_3    , KC_4    , KC_5    , KC_NO  ,
         KC_NO      , KC_DLR  , KC_PLUS , KC_LPRN , KC_RPRN , KC_AT   ,
-        KC_NO      , KC_EXLM , KC_HASH , KC_LCBR , KC_RCBR , KC_TILD , KC_NO  ,
+        KC_LSFT    , KC_EXLM , KC_HASH , KC_LCBR , KC_RCBR , KC_TILD , KC_NO  ,
         KC_LCTL    , KC_LGUI , KC_LALT , KC_NO   , KC_NO   ,
         KC_NO      , KC_NO   ,
         KC_NO      ,
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         PSCR_SEL_SV, KC_F6   , KC_F7   , KC_F8   , KC_F9   , KC_F10  , KC_F11 ,
         KC_NO      , KC_6    , KC_7    , KC_8    , KC_9    , KC_0    , KC_F12 ,
         KC_ASTR    , KC_MINS , KC_EQL  , KC_UNDS , KC_CIRC , KC_NO   ,
-        KC_NO      , KC_AMPR , KC_LBRC , KC_RBRC , KC_PERC , KC_PIPE , KC_NO  ,
+        KC_NO      , KC_AMPR , KC_LBRC , KC_RBRC , KC_PERC , KC_PIPE , KC_LSFT  ,
         KC_NO      , KC_NO   , KC_LALT , KC_LGUI , KC_LCTL ,
         KC_NO      , KC_NO   ,
         KC_NO      ,
@@ -167,8 +167,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO  , KC_NO  , KC_NO   , KC_NO  , KC_NO  , KC_NO, KC_NO,
       KC_NO  , KC_NO  , KC_WH_U , KC_NO  , KC_ACL2, KC_NO, KC_NO,
       KC_NO  , KC_WH_L, KC_WH_D , KC_WH_R, KC_ACL1, KC_NO,
-      KC_NO  , KC_NO  , KC_NO   , KC_NO  , KC_ACL0, KC_NO, KC_NO,
-      KC_NO  , KC_NO  , KC_NO   , KC_NO  , KC_NO  ,
+      KC_LSFT  , KC_NO  , KC_NO   , KC_NO  , KC_ACL0, KC_NO, KC_NO,
+      KC_LCTL    , KC_LGUI , KC_LALT , KC_NO   , KC_NO   ,
       KC_NO  , KC_NO  ,
       KC_NO  ,
       KC_BTN1, KC_BTN3, KC_NO   ,
@@ -176,8 +176,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO  , KC_NO  , KC_NO   , KC_NO  , KC_NO  , KC_NO, KC_NO,
       KC_NO  , KC_NO  , KC_PSCR , KC_NO  , KC_NO  , KC_NO, KC_NO,
       KC_MS_L, KC_MS_D, KC_MS_U , KC_MS_R, KC_NO  , KC_NO,
-      TO(0)  , KC_NO  , KC_NO   , KC_NO  , KC_NO  , KC_NO, KC_NO,
-      KC_NO  , KC_NO  , KC_NO   , KC_NO  , KC_NO  ,
+      TO(0)  , KC_NO  , KC_NO   , KC_NO  , KC_NO  , KC_NO, KC_LSFT,
+      KC_NO      , TO(0)  , KC_LALT , KC_LGUI , KC_LCTL ,
       KC_NO  , KC_NO  ,
       KC_NO  ,
       KC_BTN5, KC_BTN4, KC_BTN2),
@@ -209,8 +209,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO  , KC_BRID, KC_BRIU, KC_MPRV, KC_MPLY, KC_MNXT, KC_NO,
       KC_NO  , KC_NO  , KC_UP  , KC_NO  , KC_NO  , KC_NO  , KC_NO,
       KC_NO  , KC_LEFT, KC_DOWN, KC_RGHT, KC_NO  , KC_NO  ,
-      KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO,
-      KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,
+      KC_LSFT  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO,
+        KC_LCTL    , KC_LGUI , KC_LALT , KC_NO   , KC_NO   ,
       KC_NO  , KC_NO  ,
       KC_NO  ,
       KC_NO  , KC_NO  , KC_NO  ,
@@ -218,8 +218,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO  , KC_NO  , KC_MUTE, KC_VOLD, KC_VOLU, KC_NO  , KC_NO,
       KC_NO  , KC_HOME, KC_PGDN, KC_PGUP, KC_END , KC_NO  , KC_NO,
       KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_NO  , KC_NO  ,
-      TO(0)  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO,
-      KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,
+      TO(0)  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_LSFT,
+      KC_NO      , KC_NO   , KC_LALT , KC_LGUI , KC_LCTL ,
       KC_NO  , KC_NO  ,
       KC_NO  ,
       KC_NO  , KC_NO  , KC_NO) ,
@@ -269,23 +269,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO, KC_NO, KC_NO),
 
 [CVAT] = LAYOUT_ergodox(
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO   ,
-      KC_NO, KC_NO , KC_M  , KC_N  , KC_NO , KC_NO , KC_NO   ,
-      KC_NO, KC_NO , KC_D  , KC_F  , KC_NO , KC_NO ,
-      KC_NO, KC_DEL, KC_C  , KC_V  , KC_NO , KC_NO , TO(BASE),
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO ,
-      KC_NO, KC_NO ,
-      KC_NO,
-      KC_NO, KC_NO , KC_NO ,
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO , KC_NO , KC_NO    ,
+      KC_NO , KC_NO , KC_NO  , KC_M  , KC_N  , KC_NO , KC_NO    ,
+      KC_NO , KC_NO , KC_NO  , KC_D  , KC_F  , KC_NO ,
+      KC_NO , KC_NO , KC_DEL , KC_C  , KC_V  , KC_NO , TO(BASE) ,
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO ,
+      KC_NO , KC_NO ,
+      KC_NO ,
+      KC_NO , KC_NO , KC_NO  ,
 
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO   ,
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO   ,
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO   ,
-      KC_NO, KC_NO , KC_NO , KC_NO , KC_NO ,
-      KC_NO, KC_NO ,
-      KC_NO,
-      KC_NO, KC_NO , KC_NO)
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO , KC_NO , KC_NO    ,
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO , KC_NO , KC_NO    ,
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO , KC_NO ,
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO , KC_NO , KC_NO    ,
+      KC_NO , KC_NO , KC_NO  , KC_NO , KC_NO ,
+      KC_NO , KC_NO ,
+      KC_NO ,
+      KC_NO , KC_NO , KC_NO)
 
 };
 
@@ -348,10 +348,21 @@ void matrix_scan_user(void) {
     ergodox_right_led_3_off();
     switch (layer) {
       // TODO: Make this relevant to the ErgoDox EZ.
-        case 1:
+        case SYMB:
             ergodox_right_led_1_on();
             break;
-        case 2:
+        case MOUSE:
+            ergodox_right_led_2_on();
+            break;
+        case NAV:
+            ergodox_right_led_3_on();
+            break;
+        case NUM:
+            ergodox_right_led_1_on();
+            ergodox_right_led_3_on();
+            break;
+        case CVAT:
+            ergodox_right_led_1_on();
             ergodox_right_led_2_on();
             break;
         default:
