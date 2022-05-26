@@ -21,12 +21,12 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM combo_quot[] = {KC_L, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM combo_dquo[] = {KC_K, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM combo_bsls[] = {KC_O, KC_P, COMBO_END};
+const uint16_t PROGMEM combo_bsls[] = {KC_L, KC_SLSH, COMBO_END};
+const uint16_t PROGMEM combo_scrl[] = {KC_I, KC_SCLN, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo_quot, KC_QUOT),
-    COMBO(combo_dquo, KC_DQUO),
     COMBO(combo_bsls, KC_BSLS),
+    COMBO(combo_scrl, KC_SCRL),
 };
 /* const uint16_t PROGMEM test_combo1[] = {KC_A, KC_B, COMBO_END}; */
 /* const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END}; */
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV     , KC_1    , KC_2    , KC_3      , KC_4     , KC_5      , KC_DEL   ,
         KC_TAB     , KC_Q    , KC_W    , KC_E      , KC_R     , KC_T      , TO(CVAT)  ,
         KC_ESC     , KC_A    , KC_S    , KC_CTLD   , KC_SFTF  , KC_G      ,
-        KC_LSFT    , KC_SFTZ , KC_CTLX , KC_GUIC   , KC_ALTV  , KC_B      , KC_NO,
+        KC_LSFT    , KC_Z , KC_X , KC_GUIC   , KC_ALTV  , KC_B      , KC_NO,
         KC_LCTL    , KC_LGUI , KC_LALT , MO(3)     , MO(1)    ,
         KC_LEFT    , KC_RGHT ,
         KC_HOME    ,
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         PSCR_SEL_CP, KC_6    , KC_7    , KC_8      , KC_9     , KC_0      , KC_BSPC  ,
         KC_RBRC    , KC_Y    , KC_U    , KC_I      , KC_O     , KC_P      , KC_BSLS  ,
         KC_H       , KC_SFTJ , KC_CTLK , KC_L      , KC_SCLN  , KC_QUOT   ,
-        KC_QUOT    , KC_N    , KC_ALTM , KC_GUICOMM, KC_CTLDOT, KC_SFTSLSH, KC_RSFT  ,
+        KC_QUOT    , KC_N    , KC_ALTM , KC_GUICOMM, KC_DOT, KC_SLSH, KC_RSFT  ,
         KC_LT4GRV  , TT(2)   , KC_LALT , KC_LGUI   , KC_LCTL  ,
         KC_UP      , KC_DOWN ,
         KC_PGUP    ,
