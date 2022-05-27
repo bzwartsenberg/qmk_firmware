@@ -28,6 +28,27 @@
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
+/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
+#define LOCKING_SUPPORT_ENABLE
+/* Locking resynchronize hack */
+#define LOCKING_RESYNC_ENABLE
+
+/* Mod tap stuff:  */
+#define TAPPING_TOGGLE  2
+#define TAPPING_TERM    200
+//Note: it seems that  this i the important one below: (the ignore mod tap interrupt)
+#define IGNORE_MOD_TAP_INTERRUPT // this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.)
+/* fix space cadet rollover issue */
+#define DISABLE_SPACE_CADET_ROLLOVER
+/* NKRO */
+#ifndef FORCE_NKRO
+    #define FORCE_NKRO  // Depends on NKRO_ENABLE.
+#endif
+
+
+//Combos:
+#define COMBO_COUNT 3
+
 /* number of backlight levels */
 
 #ifdef BACKLIGHT_PIN
@@ -38,12 +59,6 @@
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5
-
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPkORT_ENABLE
-
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
 #define IS_COMMAND() ( \
