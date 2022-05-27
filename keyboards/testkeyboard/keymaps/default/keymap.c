@@ -3,52 +3,12 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	KEYMAP(
-		KC_A, KC_B, KC_C),
+		KC_A, KC_8,
+		KC_C, TO(1)),
 
 	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS),
-
-	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS)
+		KC_D, QK_BOOT,
+		KC_F, TO(0)),
 
 };
 
@@ -95,4 +55,22 @@ void led_set_user(uint8_t usb_led) {
 		
 	}
 
+}
+
+
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) { /* First encoder */
+        if (clockwise) {
+            tap_code_delay(KC_WH_U, 10);
+        } else {
+            tap_code_delay(KC_WH_D, 10);
+        }
+    } else if (index == 1) { /* Second encoder */
+        if (clockwise) {
+            tap_code_delay(KC_VOLU, 10);
+        } else {
+            tap_code_delay(KC_VOLD, 10);
+        }
+    }
+    return false;
 }

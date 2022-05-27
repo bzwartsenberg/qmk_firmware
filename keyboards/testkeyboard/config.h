@@ -12,13 +12,18 @@
 #define DESCRIPTION     Keyboard
 
 /* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 3
+#define MATRIX_ROWS 2
+#define MATRIX_COLS 2
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { B0 }
-#define MATRIX_COL_PINS { B1, B2, B3 }
+#define MATRIX_ROW_PINS { B5, B4 }
+#define MATRIX_COL_PINS { B2, B6 }
 #define UNUSED_PINS
+
+
+#define ENCODERS_PAD_A { F5 }
+#define ENCODERS_PAD_B { F4 }
+
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW

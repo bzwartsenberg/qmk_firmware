@@ -33,13 +33,8 @@ ARCH = AVR8
 #     CPU clock adjust registers or the clock division fuses), this will be equal to F_CPU.
 F_USB = $(F_CPU)
 
-# Interrupt driven control endpoint task(+60)
-OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 
-
-# Boot Section Size in *bytes*
-OPT_DEFS += -DBOOTLOADER_SIZE=4096
-
+BOOTLOADER = caterina
 
 # Build Options
 #   comment out to disable the options.
@@ -52,5 +47,7 @@ COMMAND_ENABLE ?= no    # Commands for debug and configuration
 SLEEP_LED_ENABLE ?= no  # Breathing sleep LED during USB suspend
 NKRO_ENABLE ?= yes		# USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 BACKLIGHT_ENABLE ?= no  # Enable keyboard backlight functionality
-AUDIO_ENABLE ?= no
+AUDIO_ENABLE ?= yes
 RGBLIGHT_ENABLE ?= no
+
+ENCODER_ENABLE = yes
