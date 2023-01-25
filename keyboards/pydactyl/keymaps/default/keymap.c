@@ -158,3 +158,12 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     }
     return false;
 }
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SYMB_ESC:
+            return TAPPING_TERM - 70;
+        default:
+            return TAPPING_TERM;
+    }
+}

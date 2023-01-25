@@ -36,6 +36,8 @@
 /* Mod tap stuff:  */
 #define TAPPING_TOGGLE  2
 #define TAPPING_TERM    200
+#define TAPPING_TERM_PER_KEY
+
 //Note: it seems that  this i the important one below: (the ignore mod tap interrupt)
 #define IGNORE_MOD_TAP_INTERRUPT // this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.)
 /* fix space cadet rollover issue */
